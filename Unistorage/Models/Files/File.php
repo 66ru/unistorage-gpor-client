@@ -32,4 +32,9 @@ abstract class File extends Component
     {
         return $this->resourceUri;
     }
+
+    /**
+     * @return integer return TTL or 0 if permanent
+     */
+    abstract public function getTtl();
 }

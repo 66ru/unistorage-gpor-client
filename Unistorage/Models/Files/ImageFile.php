@@ -107,7 +107,7 @@ class ImageFile extends RegularFile
      */
     public function grayscale($lowPriority = false, $unistorage)
     {
-        return $unistorage->applyAction($this, RegularFile::ACTION_GRAYSCALE, [], $lowPriority);
+        return $unistorage->applyAction($this, RegularFile::ACTION_GRAYSCALE, array(), $lowPriority);
     }
 
     /**

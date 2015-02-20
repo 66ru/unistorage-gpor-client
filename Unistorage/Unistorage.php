@@ -122,11 +122,11 @@ class Unistorage
     {
         $answer = $this->sendRequest($resourceUri);
         if ($answer['status'] == self::STATUS_WAIT) {
-            return new PendingFile($resourceUri, ['ttl' => $answer['ttl']]);
+            return new PendingFile($resourceUri, array('ttl' => $answer['ttl']));
         } elseif (strpos($resourceUri, '/zip/') === 0) {
-            return new ZipFile($resourceUri, ['ttl' => $answer['ttl'], 'url' => $answer['data']['url']]);
+            return new ZipFile($resourceUri, array('ttl' => $answer['ttl'], 'url' => $answer['data']['url']));
         } elseif ($answer['status'] == self::STATUS_JUST_URI) {
-            return new TemporaryFile($resourceUri, ['ttl' => $answer['ttl'], 'url' => $answer['data']['url']]);
+            return new TemporaryFile($resourceUri, array('ttl' => $answer['ttl'], 'url' => $answer['data']['url']));
         } else {
             static $unistorageTypeToClassName = array(
                 'image'   => 'ImageFile',
@@ -224,11 +224,11 @@ class Unistorage
      */
     public function applyAction($file, $actionName, $actionParams = array(), $lowPriority = false)
     {
-        $additionalParams = [];
+        $additionalParams = array();
         if ($lowPriority) {
-            $additionalParams = [
+            $additionalParams = array(
                 'with_low_priority' => $lowPriority,
-            ];
+            );
         }
         $answer = $this->sendRequest(
             $file->resourceUri,
@@ -248,11 +248,11 @@ class Unistorage
      */
     public function applyTemplate($file, $template, $lowPriority = false)
     {
-        $additionalParams = [];
+        $additionalParams = array();
         if ($lowPriority) {
-            $additionalParams = [
+            $additionalParams = array(
                 'with_low_priority' => $lowPriority,
-            ];
+            );
         }
         $answer = $this->sendRequest(
             $file->resourceUri,

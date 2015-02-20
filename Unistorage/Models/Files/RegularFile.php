@@ -64,6 +64,14 @@ class RegularFile extends File
         return $unistorage->applyTemplate($this, $template, $lowPriority);
     }
 
+    /**
+     * @return int
+     */
+    public function getTtl()
+    {
+        return 0;
+    }
+
     public function getMimeType()
     {
         return $this->mimeType;
