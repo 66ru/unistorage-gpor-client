@@ -4,8 +4,10 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "DarkAiR",
-            "email": "darkair@list.ru"
+            "name": "m8rge"
+        },
+        {
+            "name": "DarkAiR"
         }
     ],
     "require-dev": {
