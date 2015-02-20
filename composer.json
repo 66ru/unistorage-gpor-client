@@ -1,5 +1,5 @@
 {
-    "name": "66ru/unistorage-yii-client",
+    "name": "66ru/unistorage-gpor-client",
     "description": "Client for unistorage",
     "license": "MIT",
     "require-dev": {
