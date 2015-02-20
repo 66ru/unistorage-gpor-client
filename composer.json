@@ -2,6 +2,12 @@
     "name": "66ru/unistorage-gpor-client",
     "description": "Client for unistorage",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "DarkAiR",
+            "email": "darkair@list.ru"
+        }
+    ],
     "require-dev": {
         "phpunit/phpunit": "3.7.14"
     },
