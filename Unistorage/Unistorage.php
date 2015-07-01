@@ -147,6 +147,20 @@ class Unistorage
     }
 
     /**
+     * @param string $resourceUri
+     * @return array
+     */
+    public function getTemplateData($resourceUri)
+    {
+        $answer = $this->sendRequest($resourceUri);
+        if (!isset($answer['status']) || $answer['status'] != 'ok') {
+            return array();
+        }
+
+        return $answer['data'];
+    }
+
+    /**
      * @param  array $answerData
      *
      * @return array
